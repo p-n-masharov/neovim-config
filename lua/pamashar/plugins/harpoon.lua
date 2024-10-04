@@ -61,7 +61,7 @@ return {
                 if marks ~= nil then
                     vim.o.tabline = marks
                 else
-                    vim.o.tabline = string.format("%%#HarpoonActive#      %s ",vim.fn.fnamemodify(vim.fn.expand('%'), ':t'))
+                    vim.o.tabline = string.format("%%#HarpoonActive#      %s ", vim.fn.expand('%'))
                 end
                 vim.api.nvim_set_hl(0, "TabLineFill", { fg = "white", bg = bg })
             end
