@@ -11,7 +11,8 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
+--vim.opt.cursorcolumn = true
+--vim.opt.colorcolumn = table.concat(vim.fn.range(120, 1000), ',')
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true -- splitting a window will put the new window below the current one
@@ -24,10 +25,7 @@ vim.opt.splitbelow = true -- splitting a window will put the new window below th
 --vim.opt.spelllang = { "en_us", "ru" }
 --vim.opt.spell = true
 
---vim.opt.swapfile = false
-
-vim.opt.colorcolumn = "120"
-vim.opt.cursorcolumn = false
+vim.opt.swapfile = false
 
 vim.opt.signcolumn = "yes"
 

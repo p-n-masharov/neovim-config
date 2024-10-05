@@ -1,8 +1,9 @@
 local grey = "#797C91"
-local bg = "#2a2b3c"
+local bg = "#181825"
+local text = "#5c9bf4"
 vim.api.nvim_set_hl(0, "HarpoonInactive", { fg = grey, bg = bg })
-vim.api.nvim_set_hl(0, "HarpoonActive", { fg = grey })
-vim.api.nvim_set_hl(0, "HarpoonNumberActive", { fg = grey })
+vim.api.nvim_set_hl(0, "HarpoonActive", { fg = text, bg = bg })
+vim.api.nvim_set_hl(0, "HarpoonNumberActive", { fg = text, bg = bg })
 vim.api.nvim_set_hl(0, "HarpoonNumberInactive", { fg = grey, bg = bg })
 
 return {
@@ -18,7 +19,7 @@ return {
             vim.cmd(":do User")
         end)
         vim.keymap.set("n", "<leader>mn", function() harpoon:list():next() end)
-        vim.keymap.set("n", "<leader>mp", function() harpoon:list():prev() end)
+        vim.keymap.set("n", "<leader>MN", function() harpoon:list():prev() end)
 
         vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
